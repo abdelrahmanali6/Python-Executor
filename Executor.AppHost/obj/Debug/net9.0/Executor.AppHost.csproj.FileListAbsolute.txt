@@ -128,3 +128,4 @@ D:\Executor\Executor\Executor.AppHost\obj\Debug\net9.0\refint\Executor.AppHost.d
 D:\Executor\Executor\Executor.AppHost\obj\Debug\net9.0\Executor.AppHost.pdb
 D:\Executor\Executor\Executor.AppHost\obj\Debug\net9.0\Executor.AppHost.genruntimeconfig.cache
 D:\Executor\Executor\Executor.AppHost\obj\Debug\net9.0\ref\Executor.AppHost.dll
+D:\Executor\Executor\Executor.AppHost\obj\Debug\net9.0\Executor.AppHost.sourcelink.json

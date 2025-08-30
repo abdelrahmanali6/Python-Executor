@@ -70,6 +70,10 @@
             "Microsoft.Extensions.ServiceDiscovery": {
               "target": "Package",
               "version": "(, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.3, )"
             }
           },
           "imports": [

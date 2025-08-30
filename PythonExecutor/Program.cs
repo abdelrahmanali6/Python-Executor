@@ -1,16 +1,28 @@
+using PythonScriptService.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Essential services
+// Add services
 builder.Services.AddControllers();
-builder.Services.AddHealthChecks();
+builder.Services.AddScoped<IScriptRunner, ScriptRunner>();
+builder.Services.AddScoped<ScriptGenerator>();
+builder.Services.AddScoped<VariableConverter>();
 
-// Service Discovery (if needed)
-// builder.Services.AddServiceDiscovery();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-app.MapGet("/", () => "Hello from Aspire API!");
-// Minimal endpoints
-app.MapHealthChecks("/health");
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseRouting();
+
+app.UseAuthorization();
+
 app.MapControllers();
 
 app.Run();
